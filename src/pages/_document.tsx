@@ -11,7 +11,6 @@ export default function Document() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <body>
-        <Navbar /> {/*Навбар, должен быть на всех страницах*/}
         <Main /> {/*Pages как я понял*/}
         <NextScript />
       </body>
