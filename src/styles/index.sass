@@ -1,3 +1,5 @@
+@import "_media.sass"
+  
 $brandColor: #F68221E5
 $primaryDark: #333333
 $generalBlocksBG: #ffffff66 //white 40%
@@ -41,13 +43,29 @@ a
   top: 2px
   left: -2px
   transition: 200ms
+.arrow-down
+  position: relative
+  top: -1.7px
+  left: 10px
+
+#background-for-buttons
+  background: $brandColor
+  transition: 200ms
+  z-index: -1
+  top: 20px
+  position: absolute
+  box-shadow: 0px 10px 15px 0px #F6822140
+  width: 90px
+  height: 24px
 
 .active-page
-  background: $brandColor !important
+  // background: $brandColor !important
   color: $generalWhite !important
-  box-shadow: 0px 10px 15px 0px #F6822140
+  // box-shadow: 0px 10px 15px 0px #F6822140
   // cursor: default !important
   // user-select: none
+  &:hover
+    background: none !important
   .icon
     position: relative
     filter: invert(0%) !important
@@ -61,16 +79,24 @@ a
   display: flex
   align-items: center
   justify-content: space-between
+  .navbar-account
+    display: flex
+    align-items: center
+    padding: 0px 20px 0px 0px
+    .navbar-account-pfp
+      padding-right: 10px
+      &>img
+        border-radius: 20px
   .navbar-logo
     padding: 0px
     margin: 0px
     height: 80px
   .navbar-buttons
+    z-index: 10
     .navbar-button
-      min-width: 149px
       color: $primaryDark
       vertical-align: middle
-      background: nones
+      background: none
       padding: 10px 20px 10px 20px
       margin: 0px 5px 0px 5px
       border-radius: 15px

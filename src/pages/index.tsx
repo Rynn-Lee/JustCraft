@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <Head><title>JustCraft - Главная</title></Head>
-      <main>
+      <div>
         Главная
-      </main>
+      </div>
     </>
   )
 }

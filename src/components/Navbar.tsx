@@ -5,6 +5,8 @@ import homeIco from "../assets/icons/nav/nav-home.svg"
 import modpacksIco from "../assets/icons/nav/nav-modpacks.svg"
 import aboutIco from "../assets/icons/nav/nav-about.svg"
 import journalIco from "../assets/icons/nav/nav-journal.svg"
+import arrowDown from "../assets/icons/nav/nav-arrow-down.svg"
+import pfp from "../assets/images/pfp.png"
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import { activePageButton } from "@/utils/activePageButton"
@@ -22,25 +24,28 @@ export default function Navbar(){
     <div className="navbar">
       <div className="navbar-logo"><Image src={logoGray} alt={"logo"}/></div>
       <div className="navbar-buttons">
-
+        <span className="navbar-button active-page" id="background-for-buttons"/>
         <Link href="/" onClick={()=>activePage("/")}>
-          <span className="navbar-button"><Image src={homeIco} alt={"home"} className={"icon"} color={"#000000"}/> Главная</span>
+          <span className="navbar-button"><Image src={homeIco} alt={"home"} className={"icon"} color={"#000000"}/><span> Главная</span></span>
         </Link>
 
         <Link href="/modpacks" onClick={()=>activePage("/modpacks")}>
-          <span className="navbar-button"><Image src={modpacksIco} alt={"home"} className={"icon"}/> Сборки</span>
+          <span className="navbar-button"><Image src={modpacksIco} alt={"home"} className={"icon"}/><span> Сборки</span></span>
         </Link>
 
         <Link href="/about" onClick={()=>activePage("/about")}>
-          <span className="navbar-button"><Image src={aboutIco} alt={"home"} className={"icon"}/> О нас</span>
+          <span className="navbar-button"><Image src={aboutIco} alt={"home"} className={"icon"}/><span> О нас</span></span>
         </Link>
 
         <Link href="/journal" onClick={()=>activePage("/journal")}>
-          <span className="navbar-button"><Image src={journalIco} alt={"home"} className={"icon"}/> Журнал</span>
+          <span className="navbar-button"><Image src={journalIco} alt={"home"} className={"icon"}/><span> Журнал</span></span>
         </Link>
-
       </div>
-      <div className="navbar-account">Войти</div>
+      <div className="navbar-account">
+        <span className="navbar-account-pfp"><Image src={pfp} alt={"pfp"} width={64}/></span>
+        <span className="navbar-account-name">Nickname</span>
+        <span className="navbar-account-pfp"><Image src={arrowDown} alt={"down"} className={"arrow-down"} width={10.54}/></span>
+      </div>
     </div>
   )
 }
