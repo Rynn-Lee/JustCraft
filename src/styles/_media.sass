@@ -1,13 +1,20 @@
 @media only screen and (max-width: 930px) 
   .navbar-button>span
     display: none
-  
-@media only screen and (max-width: 666px) 
+@media only screen and (max-width: 666px)
+  .navbar
+    height: 60px
   .navbar-button>span
     display: none
   .navbar-account-name, .arrow-down
     display: none
+  .navbar-logo, .navbar-logo>img
+    width: 100px !important
+  .navbar-account-pfp, .navbar-account-pfp>img
+    width: 50px !important
+    height: 50px !important
   .navbar-account
+    width: 70px
     padding: 0px !important
   .navbar-buttons
     display: flex
@@ -18,7 +25,7 @@
     bottom: 0px
     padding: 20px 0px 20px 0px
   .icon
-    top: -5px
-    left: 0px
+    top: 3px !important
+    left: -2px !important
   #background-for-buttons
     width: 5px !important

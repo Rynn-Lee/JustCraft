@@ -6,7 +6,7 @@ export default function About(){
   return(
     <div>
     <Head><title>JustCraft - О нас</title></Head>
-      О нас страница
+      О нас 
     </div>
   )
 }

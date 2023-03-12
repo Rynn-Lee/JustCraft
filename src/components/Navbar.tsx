@@ -44,7 +44,7 @@ export default function Navbar(){
       <div className="navbar-account">
         <span className="navbar-account-pfp"><Image src={pfp} alt={"pfp"} width={64}/></span>
         <span className="navbar-account-name">Nickname</span>
-        <span className="navbar-account-pfp"><Image src={arrowDown} alt={"down"} className={"arrow-down"} width={10.54}/></span>
+        <span className="navbar-account-pfp"><Image src={arrowDown} alt={"down"} className={"arrow-down"}/></span>
       </div>
     </div>
   )
