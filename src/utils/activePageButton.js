@@ -26,13 +26,14 @@ export const activePageButton = (clickedPage = 1) => {
   const getBounding = () => {
     buttonsBoundings = {
       "width":pageButtons[page].getBoundingClientRect().width-50 + "px",
-      "left": pageButtons[page].getBoundingClientRect().left + "px"
+      "left": pageButtons[page].getBoundingClientRect().left + "px",
+      "top": pageButtons[page].getBoundingClientRect().top + "px"
     }
   }
 
   const applyStyles = () => {
     pageButtons[page].classList.add("active-page");
-    bgForButtons.style.translate = buttonsBoundings.left
+    bgForButtons.style.transform = `translate(${buttonsBoundings.left},${buttonsBoundings.top})`
     bgForButtons.style.width = buttonsBoundings.width
   }
 
