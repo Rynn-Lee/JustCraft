@@ -1,33 +1,42 @@
-export const activePageButton = (clickedPage) => {
+export const activePageButton = (clickedPage = 1) => {
   const pageButtons = document.querySelectorAll(".navbar-button")
   const bgForButtons = document.getElementById("background-for-buttons")
-
-  pageButtons.forEach(button => {
-    button.classList.remove("active-page")
-  });
-  console.log("Clicked page: ", clickedPage)
-
-  if(!clickedPage){
-    clickedPage = "/" + window.location.pathname.split("/")[1]
-    console.log("Clicked page: ", clickedPage)
+  let buttonsBoundings = {}
+  let page = clickedPage
+  
+  if(!page){
+    page = "/" + window.location.pathname.split("/")[1]
+    console.log("Clicked page: ", page)
   }
   
-  switch(clickedPage){
-    case "/":
-      pageButtons[1].classList.add("active-page");
-      bgForButtons.style.translate = "5px"
-      break;
-    case "/modpacks":
-      pageButtons[2].classList.add("active-page");
-      bgForButtons.style.translate = "152px"
-      break;
-    case "/about":
-      pageButtons[3].classList.add("active-page");
-      bgForButtons.style.translate = "293px"
-      break;
-    case "/journal":
-      pageButtons[4].classList.add("active-page");
-      bgForButtons.style.translate = "432px"
-      break;
+  window.onresize = () => {
+    setTimeout(()=>{
+      clearStyles()
+      getBounding()
+      applyStyles()
+    }, 100);
   }
+
+  const clearStyles = () => {
+    pageButtons.forEach(button => {
+      button.classList.remove("active-page")
+    });
+  }
+
+  const getBounding = () => {
+    buttonsBoundings = {
+      "width":pageButtons[page].getBoundingClientRect().width-50 + "px",
+      "left": pageButtons[page].getBoundingClientRect().left + "px"
+    }
+  }
+
+  const applyStyles = () => {
+    pageButtons[page].classList.add("active-page");
+    bgForButtons.style.translate = buttonsBoundings.left
+    bgForButtons.style.width = buttonsBoundings.width
+  }
+
+  clearStyles()
+  getBounding()
+  applyStyles()
 }

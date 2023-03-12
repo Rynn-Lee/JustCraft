@@ -13,7 +13,7 @@ import { activePageButton } from "@/utils/activePageButton"
 
 export default function Navbar(){
   
-  const activePage = (clickedPage: string) => {
+  const activePage = (clickedPage: number) => {
     activePageButton(clickedPage)
   }
   useEffect(()=>{
@@ -23,21 +23,21 @@ export default function Navbar(){
   return(
     <div className="navbar">
       <div className="navbar-logo"><Image src={logoGray} alt={"logo"}/></div>
+      <span className="navbar-button active-page" id="background-for-buttons"/>
       <div className="navbar-buttons">
-        <span className="navbar-button active-page" id="background-for-buttons"/>
-        <Link href="/" onClick={()=>activePage("/")}>
+        <Link href="/" onClick={()=>activePage(1)}>
           <span className="navbar-button"><Image src={homeIco} alt={"home"} className={"icon"} color={"#000000"}/><span> Главная</span></span>
         </Link>
 
-        <Link href="/modpacks" onClick={()=>activePage("/modpacks")}>
+        <Link href="/modpacks" onClick={()=>activePage(2)}>
           <span className="navbar-button"><Image src={modpacksIco} alt={"home"} className={"icon"}/><span> Сборки</span></span>
         </Link>
 
-        <Link href="/about" onClick={()=>activePage("/about")}>
+        <Link href="/about" onClick={()=>activePage(3)}>
           <span className="navbar-button"><Image src={aboutIco} alt={"home"} className={"icon"}/><span> О нас</span></span>
         </Link>
 
-        <Link href="/journal" onClick={()=>activePage("/journal")}>
+        <Link href="/journal" onClick={()=>activePage(4)}>
           <span className="navbar-button"><Image src={journalIco} alt={"home"} className={"icon"}/><span> Журнал</span></span>
         </Link>
       </div>
