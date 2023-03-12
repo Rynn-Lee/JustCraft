@@ -11,7 +11,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <body>
-        <Main /> {/*Pages как я понял*/}
+        <Main />
         <NextScript />
       </body>
     </Html>

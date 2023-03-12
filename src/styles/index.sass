@@ -43,7 +43,7 @@ a
 .icon
   position: relative
   filter: invert(90%)
-  top: 2px
+  top: 3px
   left: 0px
   transition: 200ms
 .arrow-down
@@ -56,7 +56,7 @@ a
   transition: 200ms
   z-index: 10
   top: 0px
-  position: absolute
+  position: fixed
   width: auto
   height: 24px
   padding: 10px 20px 10px 20px
@@ -93,10 +93,16 @@ a
       &>img
         border-radius: 20px
   .navbar-logo
+    background: url("../assets/images/logo-orange.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    width: 140px
+    height: 80px
     padding: 0px
     margin: 0px
-    height: 80px
   .navbar-buttons
+    justify-content: space-evenly
+    display: flex
     z-index: 10
     .navbar-button
       color: $primaryDark

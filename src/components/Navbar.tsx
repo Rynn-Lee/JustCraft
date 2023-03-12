@@ -22,7 +22,7 @@ export default function Navbar(){
 
   return(
     <div className="navbar">
-      <div className="navbar-logo"><Image src={logoGray} alt={"logo"}/></div>
+      <div className="navbar-logo"></div>
       <span className="navbar-button active-page" id="background-for-buttons"/>
       <div className="navbar-buttons">
         <Link href="/" onClick={()=>activePage(1)}>
