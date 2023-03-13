@@ -6,6 +6,7 @@ import modpacksIco from "../assets/icons/nav/nav-modpacks.svg"
 import aboutIco from "../assets/icons/nav/nav-about.svg"
 import journalIco from "../assets/icons/nav/nav-journal.svg"
 import menuIco from "../assets/icons/nav/bars-solid.svg"
+import logIco from "../assets/icons/nav/nav-log.svg"
 import arrowDown from "../assets/icons/nav/nav-arrow-down.svg"
 import pfp from "../assets/images/pfp.png"
 import Link from "next/link"
@@ -50,7 +51,7 @@ export default function Navbar(){
       <div className="navbar-account">
         <div className="navbar-buttons">
           <Link href="/login" onClick={()=>activePage(6)}>
-            <span className="navbar-button"><Image src={menuIco} alt={"journal"} className={"icon invert"}/><span> Вход</span></span>
+            <span className="navbar-button"><Image src={logIco} alt={"journal"} className={"icon invert"}/><span> Вход</span></span>
           </Link>
         </div>
         {/* <span className="navbar-account-pfp"><Image src={pfp} alt={"pfp"} width={64}/></span>

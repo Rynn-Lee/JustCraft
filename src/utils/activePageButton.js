@@ -19,7 +19,8 @@ export const activePageButton = (clickedPage) => {
 
   setTimeout(() => {
     bgForButtons.style.transition = 200 + "ms"
-  }, 200)
+    bgForButtons.style.display = "block"
+  }, 100)
   
   window.onresize = () => {
     setTimeout(()=>{
